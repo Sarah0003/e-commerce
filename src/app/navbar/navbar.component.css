@@ -1,0 +1,13 @@
+img{
+  width:50px;
+  height:55px;
+}
+
+.test{
+ 
+  border-bottom:var(--primaryColor) 0.1rem solid;
+}
+
+.logout  {
+  cursor: pointer;
+}

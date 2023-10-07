@@ -1,0 +1,11 @@
+.add{
+  color: aliceblue;
+  background-color: var(--quatreColor);
+  transition: all 0.5s;
+}
+
+.add:hover{
+  color: var(--cinqFont);
+border: 1px solid  var(--quatreColor);
+background-color: transparent;
+}

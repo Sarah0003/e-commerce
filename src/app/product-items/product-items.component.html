@@ -1,0 +1,30 @@
+
+
+<div class="product">
+  <div class="addToWishlist d-flex justify-content-end">
+    <i *ngIf="isAddedToWishlist" (click)="deleteProduct(product.id)" class="fas fa-heart fs-5 mb-2 p-2"></i>
+    <i *ngIf="!isAddedToWishlist" (click)="addToWishList(product.id)" class="far fa-heart fs-5 mb-2 p-2"></i>
+
+  </div>
+
+
+  <a [routerLink]="['/productDetails',product.id]">
+
+    <img [src]="product.imageCover" alt class="w-100">
+    <p class="text-main mt-4 h6">{{product.category.name}}</p>
+    <h2 class="h5 fw-bold">{{product.title | trim:2}}</h2>
+    <div class="d-flex justify-content-between ">
+      <div class="price">
+        <p>{{product.price  | currency}} </p>
+      </div>
+      <div class="rating">
+        <i class="rating-color fa fa-star"></i>
+        {{product.ratingsAverage}}
+      </div>
+    </div>
+  </a>
+  <button class="btn bg-main text-white w-100" (click)='addToCart(product.id)'>
+    <span>Add to cart</span>
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+  </button>
+</div>

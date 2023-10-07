@@ -1,0 +1,51 @@
+<div class="container p-5">
+  <div class="row align-items-center">
+    <div class="addToWishlist d-flex justify-content-end">
+      <i *ngIf="isAddedToWishlist" (click)="deleteProduct(productDetails.id)" class="fas fa-heart fs-5 mb-2 p-2"></i>
+      <i *ngIf="!isAddedToWishlist" (click)="addToWishList(productDetails.id)" class="far fa-heart fs-5 mb-2 p-2"></i>
+  
+    </div>
+    <div class="col-md-4">
+      <div class="productImage">
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let slide of productDetails.images">
+
+            <ng-template carouselSlide>
+
+              <img [src]="slide">
+            </ng-template>
+          </ng-container>
+
+        </owl-carousel-o>
+      </div>
+    </div>
+    <div class="col-md-8 d-flex justify-content-center flex-column">
+      <div class="productDescription">
+        <h2 class="h5 fw-bold">{{productDetails.title | uppercase}}</h2>
+        <p class="text-main mt-4 h6">{{productDetails.category.name}}</p>
+
+        <p class="mt-4">{{productDetails.description}}</p>
+
+        <div class="d-flex justify-content-start flex-column">
+
+          <div class="price pt-2 pb-2">
+            <p class="fw-bolder m-0">{{productDetails.price | currency}}</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-start">
+            <div class="rating pb-3 ">
+              <i class="rating-color fa fa-star"></i>
+              {{productDetails.ratingsAverage}}
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <button class="btn add rounded-pill w-25" (click)="addToCart(productDetails.id)">
+        <span class="pe-2">Add to cart</span>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>

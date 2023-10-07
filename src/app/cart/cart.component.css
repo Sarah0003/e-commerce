@@ -1,0 +1,19 @@
+.btn-update{
+  border: 1px solid var(--quatreColor);
+  transition: all 0.5s;
+}
+
+.btn-update:hover{
+  background: var(--quatreColor);
+  color: #ffffff;
+}
+
+.remove{
+  color: red;
+transition: all 0.5s;
+}
+.remove:hover{
+  color: var(--cinqFont);
+
+}
+

@@ -1,0 +1,47 @@
+<div class="container my-5">
+  <h2>My wishlist:</h2>
+  <!-- export interface Wishlist {
+    count:number,
+    data:Data,
+  
+  }
+  
+  interface Data{
+    title:string,
+    _id:string,
+    imageCover:string,
+    price:number,
+    ratingsAverage:number,
+  } -->
+  <div class="bg-main-light rounded-3 p-3 cinqFont" *ngIf="wishListData?.data">
+    <div class="d-flex justify-content-between m-4">
+      <h6>
+        Number of items:
+        <span class="quatreColor">{{wishListData.count}}</span>
+      </h6>
+    </div>
+    <div class="row border-bottom m-1" *ngFor="let item of wishListData.data">
+      <div class="col-md-1">
+        <img [src]="item.imageCover" alt="" class="w-100" />
+      </div>
+
+      <div class="col-md-9">
+        <div class="item">
+          <h4>{{ item.title }}</h4>
+          <p class="quatreColor fw-bold mb-0">
+            {{ item.category.name }}
+          </p>
+          <p class="mb-0"> <i class="rating-color fa fa-star pt-2 mb-0"></i>
+            {{item.ratingsAverage}}</p>
+          <div class="d-flex align-items-center mb-3">
+            <p class="fw-bold mb-0">{{item.price| currency }}</p>
+          
+            <button (click)="deleteProduct(item.id)" class="btn remove">
+              <i class="fa-regular fa-trash-can"></i> Remove
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

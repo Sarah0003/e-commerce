@@ -1,0 +1,12 @@
+<div class="conatiner w-100 mx-auto p-5">
+  <div class="row  g-4 p-5"  >
+    <div class="col-md-4" *ngFor="let categoriesItem of allcategoriesItems">
+      <div class="card category-card">
+        <img class="img-fluid ratio-4x3 w-100 " style="height: 300px;" [src]="categoriesItem.image">
+        <div class="card-body">
+          <p class="text-center fw-bolder" >{{categoriesItem.name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

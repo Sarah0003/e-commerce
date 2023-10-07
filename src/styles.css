@@ -1,1 +1,172 @@
 /* You can add global styles to this file, and also import other style files */
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+  @import "primeng/resources/themes/lara-light-blue/theme.css";
+  @import "primeng/resources/primeng.css";
+  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+
+  
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+    --primaryColor:rgb(0,169,157);
+    --secondaryColor:#1F3A3C;
+    --tersiaryColor:#6BADB9;
+    --quatreColor:#00a59b;
+    --cinqFont:#01444D;
+    --primaryFont:'Poppins', sans-serif;
+}
+
+.cinqFont{
+color: var(--cinqFont);
+}
+.quatreColor{
+    color: var(--quatreColor);
+}
+
+.bg-quatreColor{
+    background-color: var(--quatreColor);
+    color: aliceblue;
+}
+
+body{
+    padding-top: 150px;
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black;
+    text-decoration: none;
+}
+.product{
+    padding: 1.2rem;
+    transition: all 0.5s ease-in;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+
+}
+.product h2{
+    color: var(--secondaryColor);
+}
+.product:hover
+{
+    border: solid 1px var(--quatreColor);
+}
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--quatreColor);
+}
+.bg-main
+{
+    background-color: var(--quatreColor) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+
+.price{
+    color: var(--secondaryColor);
+
+}
+.price sub{
+    vertical-align: super;
+}
+
+.searchInput{
+    border: var(--quatreColor) 1px solid;
+    color: var(--cinqFont);
+}
+
+.searchInput:focus{
+    color: var(--cinqFont);
+    background-color: var(--bs-body-bg);
+    border-color:var(--quatreColor);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #53a6aca1;
+}
+
+
+.check-out {
+    transition: all 0.7s;
+    }
+    .check-out a{
+      color: #ffffff;
+      transition: all 0.7s;
+    
+    }
+    .check-out:hover{
+      background-color:var(-bg-main);
+      border: 1px solid var(--quatreColor);
+    }
+    
+    .check-out:hover a{
+      color: var(--cinqFont);
+    }
+
+
+    .category-card{
+        transition: all 0.2s ease-in;
+        border-radius: 1rem;
+        color: var(--quatreColor);
+        font-family: var(--font-family);
+        font-weight:500;
+        font-size:28px;
+      }
+      
+      .category-card img{
+        border-radius: 1rem 1rem 0 0;
+      
+      }
+      
+      
+      .category-card:hover
+      {
+        border: solid 1px var(--quatreColor);
+        box-shadow: 0 0 11px var(--quatreColor); 
+      
+      }
+      
+    
+
+
+.fa-heart{
+    cursor: pointer;
+    color: rgb(116, 116, 116);
+
+}
+ .fas{
+    color:#00a59b;
+}
+
+footer{
+    background-color: var(--cinqFont);
+}
