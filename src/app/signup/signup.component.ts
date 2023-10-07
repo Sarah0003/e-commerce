@@ -63,7 +63,7 @@ export class SignupComponent {
           },
           error: (err: any) => {
             console.log("error", err);
-            this.apiError = err.error ? err.error : (err.error.errors.msg);
+            this.apiError = err.error.errors.msg;
           }
         })
     } else {
