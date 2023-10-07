@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { BrandsComponent } from './brands/brands.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -18,7 +17,6 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", canActivate: [authGuard], component: HomeComponent },
-  { path: "about", canActivate: [authGuard], component: AboutComponent },
   { path: "products", canActivate: [authGuard], component: ProductsComponent },
   { path: "brands", canActivate: [authGuard], component: BrandsComponent },
   { path: "categories", canActivate: [authGuard], component: CategoriesComponent },

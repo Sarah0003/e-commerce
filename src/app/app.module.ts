@@ -4,7 +4,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { SignupComponent } from './signup/signup.component';
@@ -45,7 +44,6 @@ import { RatingModule } from 'primeng/rating';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
     ProductsComponent,
     CategoriesComponent,
     SignupComponent,
